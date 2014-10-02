@@ -27,6 +27,7 @@
 	var turndownAt = 20
 	var numTurntAnimations = 10
 	var turntDown = false;
+	var maxNodes = 1000;
 	var animationCSS = {
 		'tdfw_intro': 'tdfwIntro 1s infinite ease-in-out',
 		'turntDown': function() {
@@ -161,8 +162,11 @@
 	function addCurStyles() {
 
 		var curClass = getCurClass()
-		var nodes = document.querySelectorAll('*')
-		for(var i = 0; i < nodes.length ; i++) {
+		var nodes = document.querySelectorAll('div, span, a, img, a, section, header, footer, video, iframe, nav, article, h1, h2, h3, h4, h5, h6, footer, main, p, pre, blockquote, ol, ul, li, embed, object, canvas, svg, table, tr, td, form, input, select, button, textarea')
+		var max = maxNodes < nodes.length ? maxNodes : nodes.length;
+		console.log(nodes)
+		console.log(max)
+		for(var i = 0; i < max ; i++) {
 			var node = nodes[i];
 			
 			node.classList.add(curClass)
