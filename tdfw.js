@@ -133,7 +133,7 @@
 				rotationAmount = ~~ rotationAmount
 				var rotateDirection = String.fromCharCode(88 + ~~ (Math.random() * 2))
 				var keyframe = '-webkit-transform: translate(' + x + 'px,' + y +'px) rotate' + rotateDirection + '(' + rotationAmount + 'deg); '
-				keyframe += 'transform: translate(' + x + 'px,' + y + 'px)` rotate' + rotateDirection + '(' + rotationAmount + 'deg); '
+				keyframe += 'transform: translate(' + x + 'px,' + y + 'px) rotate' + rotateDirection + '(' + rotationAmount + 'deg); '
 				turntKeyFrames[j] += pct + ' { ' + keyframe + ' }'
 
 			}
