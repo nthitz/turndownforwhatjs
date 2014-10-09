@@ -162,10 +162,16 @@
 	function addCurStyles() {
 
 		var curClass = getCurClass()
-		var nodes = document.querySelectorAll('div, span, a, img, a, section, header, footer, video, iframe, nav, article, h1, h2, h3, h4, h5, h6, footer, main, p, pre, blockquote, ol, ul, li, embed, object, canvas, svg, table, tr, td, form, input, select, button, textarea')
+		var nodes = Array.prototype.slice.call(document.querySelectorAll('img'))
+		nodes = nodes.concat(Array.prototype.slice.call(document.querySelectorAll('div')))
+		nodes = nodes.concat(Array.prototype.slice.call(document.querySelectorAll('span')))
+		nodes = nodes.concat(Array.prototype.slice.call(document.querySelectorAll('a')))
+		nodes = nodes.concat(Array.prototype.slice.call(document.querySelectorAll('section, header, footer, video, iframe, nav, article, h1, h2, h3, h4, h5, h6, footer, main, p, pre, blockquote, ol, ul, li, embed, object, canvas, svg, form, input, select, button')))
+
 		var max = maxNodes < nodes.length ? maxNodes : nodes.length;
-		console.log(nodes)
-		console.log(max)
+
+		//console.log(nodes)
+		//console.log(max)
 		for(var i = 0; i < max ; i++) {
 			var node = nodes[i];
 			
