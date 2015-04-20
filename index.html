@@ -1,173 +1,42 @@
-<!DOCTYPE>
-<html>
-<head>
-  <style>
-    body {
-      font-family: sans-serif;
-    }
-    #container {
-      padding: 20px;
-      margin: 20px auto;
-      width: 400px;
-      border-radius: 3px;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -o-border-radius: 3px;
-    }
-    #container p{
-      display: block;
-      margin: 0px auto 20px auto;
-      text-align: center;
-    }
-    #bookmarklet {
-      display: block;
-      font-weight: bold;
-      text-tranform: uppercase;
-      color: white;
-      background: #8904C7;
-      text-align: left;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -o-border-radius: 3px;
-      border-radius: 3px;
-      border-bottom: 2px solid #DFA5FA;
-      text-shadow: 0 1px 1px #DFA5FA;
-      font-size: 16px;
-      overflow: hidden;
-      cursor: move;
-      padding: 10px;
-      -webkit-user-select: none;
-      text-decoration: none;
-      text-transform: uppercase;
-      text-align: center;
-    }
-    #bookmarklet:hover {
-      border-bottom: 2px solid #6E4980;
-      text-shadow: 0 1px 1px #6E4980;
-    }
-    #bookmarklet:active {
-      border-bottom: none;
-      border-top: 2px solid #bd460a;
-      text-shadow: 0 1px 1px #a53d09;
-    }
-    .powered {
-      font-size: 10px;
-      color: #ddd;
-      text-align: center;
-    }
-    .powered  a {
-      color: #ddd;
-    }
-    #img {
-        margin-bottom: 50px;
-    }
-    #dfw {
-        -webkit-animation: tdfwIntro 1s ease-in-out 2s infinite;
-        animation: tdfwIntro 1s ease-in-out 2s infinite;
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Turndownforwhatjs by PaulSpoerry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Turndownforwhatjs</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/PaulSpoerry/turndownforwhatjs" class="btn">View on GitHub</a>
+      <a href="https://github.com/PaulSpoerry/turndownforwhatjs/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/PaulSpoerry/turndownforwhatjs/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    }
-    .share {
-        margin-top: 50px;
-        text-align: center;
-    }
-    @-webkit-keyframes tdfwIntro { 0% { -webkit-transform: translate(0x,0px); transform: translate(0px,0px); } 10% { -webkit-transform: translate(-4px,1px); transform: translate(-4px,1px); } 20% { -webkit-transform: translate(0px,-4px); transform: translate(0px,-4px); } 30% { -webkit-transform: translate(-3px,0px); transform: translate(-3px,0px); } 40% { -webkit-transform: translate(0px,-2px); transform: translate(0px,-2px); } 50% { -webkit-transform: translate(-4px,-4px); transform: translate(-4px,-4px); } 60% { -webkit-transform: translate(-1px,0px); transform: translate(-1px,0px); } 70% { -webkit-transform: translate(2px,2px); transform: translate(2px,2px); } 80% { -webkit-transform: translate(0px,-1px); transform: translate(0px,-1px); } 90% { -webkit-transform: translate(0px,-3px); transform: translate(0px,-3px); } 100% { -webkit-transform: translate(4px,-2px); transform: translate(4px,-2px); }  } @keyframes tdfwIntro { 0% { -webkit-transform: translate(-1px,-1px); transform: translate(-1px,-1px); } 10% { -webkit-transform: translate(-4px,1px); transform: translate(-4px,1px); } 20% { -webkit-transform: translate(0px,-4px); transform: translate(0px,-4px); } 30% { -webkit-transform: translate(-3px,0px); transform: translate(-3px,0px); } 40% { -webkit-transform: translate(0px,-2px); transform: translate(0px,-2px); } 50% { -webkit-transform: translate(-4px,-4px); transform: translate(-4px,-4px); } 60% { -webkit-transform: translate(-1px,0px); transform: translate(-1px,0px); } 70% { -webkit-transform: translate(2px,2px); transform: translate(2px,2px); } 80% { -webkit-transform: translate(0px,-1px); transform: translate(0px,-1px); } 90% { -webkit-transform: translate(0px,-3px); transform: translate(0px,-3px); } 100% { -webkit-transform: translate(4px,-2px); transform: translate(4px,-2px); }  } 
-  </style>
+    <section class="main-content">
+      <h1>
+<a id="turndownforwhatjs" class="anchor" href="#turndownforwhatjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Turndownforwhat.js</h1>
 
-  <title>Turndownforwhat.JS</title>
-  <meta property="og:title" content="Turndownforwhat.JS" />
-  <meta property="og:url" content="https://nthitz.github.io/turndownforwhatjs/"/>
-  <meta property="og:image" content="http://i.imgur.com/pLrq0jF.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:description" content="Turn webpages Down For What with the click of a button. Turndownforwhat.js makes any website a party." />
-  <meta property="description" content="Turn webpages Down For What with the click of a button. Turndownforwhat.js makes any website a party." />
+<p>It's a bookmarklet to turn your website down for what.</p>
 
-  <meta name="keywords" content="turn down for what, turndownforwhat, turndownforwhat.js, tdfw, tdfw.js, turn down for what javascript, bookmarklet, tdfw bookmarklet, turn down for what bookmarklet"
+<p><a href="http://nthitz.github.io/turndownforwhatjs">http://nthitz.github.io/turndownforwhatjs</a></p>
 
-</head>
-<body>
-  <div id="container">
-    <div id='img'></div>
-    <p> Drag this button to your bookmarks bar to turn any website <span id="dfw">down for what</span> </p>
-    <a id="bookmarklet" href='javascript:(function()%7Bjavascript:var%20s%3Ddocument.createElement(%27script%27)%3Bs.setAttribute(%27src%27,%27https://nthitz.github.io/turndownforwhatjs/tdfw.js%27)%3Bdocument.body.appendChild(s)%3B%7D)()%3B'>turndownforwhat</a>
+<p>drag the button on the above link to your bookmarks bar, then click it on any site to get the party started. </p>
 
-    <div class="share">
-        <a class="twitter-share-button" href="https://twitter.com/share?text=Turn%20websites%20down%20for%20what&amp;url=http://nthitz.github.io/turndownforwhatjs/"></a>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/PaulSpoerry/turndownforwhatjs">Turndownforwhatjs</a> is maintained by <a href="https://github.com/PaulSpoerry">PaulSpoerry</a>.</span>
 
-        <div class="fb-share-button" data-layout="button_count" data-href="https://nthitz.github.io/turndownforwhatjs/"></div>
-    </div>
-  </div>
-  <p class='powered'> Made by 
-    <a href="https://twitter.com/nthitz">nthitz</a>
-  </p>
-  <script>
-    //HMIeMb7
-    (function() {
-        var lastTime = 0;
-        var vendors = ['ms', 'moz', 'webkit', 'o'];
-        for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-            window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
-                                       || window[vendors[x]+'CancelRequestAnimationFrame'];
-        }
-     
-        if (!window.requestAnimationFrame)
-            window.requestAnimationFrame = function(callback, element) {
-                var currTime = new Date().getTime();
-                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-                var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
-                  timeToCall);
-                lastTime = currTime + timeToCall;
-                return id;
-            };
-     
-        if (!window.cancelAnimationFrame)
-            window.cancelAnimationFrame = function(id) {
-                clearTimeout(id);
-            };
-    }());
-    var imgs = ['pLrq0jF','jw0Sx4c','VKE4oTV','rGfqb3Y','XDYlwRz'];
-    var imgSrc = imgs[~~ (Math.random() * imgs.length)];
-    imgSrc = 'http://i.imgur.com/' + imgSrc + '.png';
-    var img = document.createElement('img');
-    img.setAttribute('height', 400);
-    img.setAttribute('src', imgSrc); 
-    document.getElementById('img').appendChild(img);
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
+    </section>
 
-
-  </script>
-  <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-55426781-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-
-    <script type="text/javascript">
-    window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-    </script>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '353692794797913',
-          xfbml      : true,
-          version    : 'v2.1'
-        });
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
-</body>
+  
+  </body>
 </html>
+
