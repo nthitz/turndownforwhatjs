@@ -92,43 +92,40 @@
     <p> Drag this button to your bookmarks bar to turn any website <span id="dfw">down for what</span> </p>
     <a id="bookmarklet" href='javascript:(function()%7Bjavascript:var%20s%3Ddocument.createElement(%27script%27)%3Bs.setAttribute(%27src%27,%27https://paulspoerry.github.io/turndownforwhatjs/tdfw.js%27)%3Bdocument.body.appendChild(s)%3B%7D)()%3B'>turndownforwhat</a>
 
-  <script>
-    //HMIeMb7
-    (function() {
-        var lastTime = 0;
-        var vendors = ['ms', 'moz', 'webkit', 'o'];
-        for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-            window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
-                                       || window[vendors[x]+'CancelRequestAnimationFrame'];
-        }
-     
-        if (!window.requestAnimationFrame)
-            window.requestAnimationFrame = function(callback, element) {
-                var currTime = new Date().getTime();
-                var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-                var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
-                  timeToCall);
-                lastTime = currTime + timeToCall;
-                return id;
-            };
-     
-        if (!window.cancelAnimationFrame)
-            window.cancelAnimationFrame = function(id) {
-                clearTimeout(id);
-            };
-    }());
-    var imgs = ['pLrq0jF','jw0Sx4c','VKE4oTV','rGfqb3Y','XDYlwRz'];
-    var imgSrc = imgs[~~ (Math.random() * imgs.length)];
-    imgSrc = 'http://i.imgur.com/' + imgSrc + '.png';
-    var img = document.createElement('img');
-    img.setAttribute('height', 400);
-    img.setAttribute('src', imgSrc); 
-    document.getElementById('img').appendChild(img);
-
-
-
-  </script>
+    <script>
+      //HMIeMb7
+      (function() {
+          var lastTime = 0;
+          var vendors = ['ms', 'moz', 'webkit', 'o'];
+          for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+              window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+              window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+                                         || window[vendors[x]+'CancelRequestAnimationFrame'];
+          }
+       
+          if (!window.requestAnimationFrame)
+              window.requestAnimationFrame = function(callback, element) {
+                  var currTime = new Date().getTime();
+                  var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                  var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+                    timeToCall);
+                  lastTime = currTime + timeToCall;
+                  return id;
+              };
+       
+          if (!window.cancelAnimationFrame)
+              window.cancelAnimationFrame = function(id) {
+                  clearTimeout(id);
+              };
+      }());
+      var imgs = ['pLrq0jF','jw0Sx4c','VKE4oTV','rGfqb3Y','XDYlwRz'];
+      var imgSrc = imgs[~~ (Math.random() * imgs.length)];
+      imgSrc = 'http://i.imgur.com/' + imgSrc + '.png';
+      var img = document.createElement('img');
+      img.setAttribute('height', 400);
+      img.setAttribute('src', imgSrc); 
+      document.getElementById('img').appendChild(img);
+    </script>
 
 </body>
 </html>
