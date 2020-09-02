@@ -24,7 +24,7 @@
 }());
 (function() {
 	var player;
-	var turndownAt = 20
+	var turndownAt = 14
 	var numTurntAnimations = 10
 	var turntDown = false;
 	var maxNodes = 1000;
@@ -65,9 +65,9 @@
 		//    after the API code downloads.
 		function onYouTubeIframeAPIReady() {
 			player = new YT.Player('tdfw', {
-				height: '200',
-				width: '305',
-				videoId: 'HMUDVMiITOU',
+				height: '480',
+				width: '720',
+				videoId: 'nxSS_n3Mjc4',
 				events: {
 					'onReady': onPlayerReady,
 					'onStateChange': onPlayerStateChange
@@ -105,7 +105,7 @@
 			removeCurStyles()
 		}
 	}
-	//<iframe width="560" height="315" src="//www.youtube.com/embed/HMUDVMiITOU?autoplay=1" frameborder="0" allowfullscreen></iframe>
+	//<iframe width="720" height="480" src="//www.youtube.com/embed/nxSS_n3Mjc4?autoplay=1" frameborder="0" allowfullscreen></iframe>
 	
 	function setupAnimations() {
 		var numKeyFrames = 10
