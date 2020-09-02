@@ -1,6 +1,6 @@
-# Turndownforwhat.js
+# CDance.js
 
 
-It's a bookmarklet to turn your website down for what.
+It's a bookmarklet to turn your website into a funeral.
 
-[http://nthitz.github.io/turndownforwhatjs](http://nthitz.github.io/turndownforwhatjs)
+[http://raveniscool27.github.io/turndownforwhatjs](http://raveniscool27.github.io/turndownforwhatjs)
