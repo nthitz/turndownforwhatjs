@@ -1,1 +1,1 @@
-javascript:(function(){javascript:var s=document.createElement('script');s.setAttribute('src','https://nthitz.github.io/turndownforwhatjs/tdfw.js');document.body.appendChild(s);})();
+javascript:(function(){javascript:var s=document.createElement('script');s.setAttribute('src','https://raveniscool27.github.io/turndownforwhatjs/CDance.js');document.body.appendChild(s);})();
