@@ -72,7 +72,7 @@
         margin-top: 50px;
         text-align: center;
     }
-    @-webkit-keyframes tdfwIntro { 0% { -webkit-transform: translate(0x,0px); transform: translate(0px,0px); } 10% { -webkit-transform: translate(-4px,1px); transform: translate(-4px,1px); } 20% { -webkit-transform: translate(0px,-4px); transform: translate(0px,-4px); } 30% { -webkit-transform: translate(-3px,0px); transform: translate(-3px,0px); } 40% { -webkit-transform: translate(0px,-2px); transform: translate(0px,-2px); } 50% { -webkit-transform: translate(-4px,-4px); transform: translate(-4px,-4px); } 60% { -webkit-transform: translate(-1px,0px); transform: translate(-1px,0px); } 70% { -webkit-transform: translate(2px,2px); transform: translate(2px,2px); } 80% { -webkit-transform: translate(0px,-1px); transform: translate(0px,-1px); } 90% { -webkit-transform: translate(0px,-3px); transform: translate(0px,-3px); } 100% { -webkit-transform: translate(4px,-2px); transform: translate(4px,-2px); }  } @keyframes tdfwIntro { 0% { -webkit-transform: translate(-1px,-1px); transform: translate(-1px,-1px); } 10% { -webkit-transform: translate(-4px,1px); transform: translate(-4px,1px); } 20% { -webkit-transform: translate(0px,-4px); transform: translate(0px,-4px); } 30% { -webkit-transform: translate(-3px,0px); transform: translate(-3px,0px); } 40% { -webkit-transform: translate(0px,-2px); transform: translate(0px,-2px); } 50% { -webkit-transform: translate(-4px,-4px); transform: translate(-4px,-4px); } 60% { -webkit-transform: translate(-1px,0px); transform: translate(-1px,0px); } 70% { -webkit-transform: translate(2px,2px); transform: translate(2px,2px); } 80% { -webkit-transform: translate(0px,-1px); transform: translate(0px,-1px); } 90% { -webkit-transform: translate(0px,-3px); transform: translate(0px,-3px); } 100% { -webkit-transform: translate(4px,-2px); transform: translate(4px,-2px); }  } 
+    @-webkit-keyframes tdfwIntro { 0% { -webkit-transform: translate(0x,0px); transform: translate(0px,0px); } 10% { -webkit-transform: translate(-4px,1px); transform: translate(-4px,1px); } 20% { -webkit-transform: translate(0px,-4px); transform: translate(0px,-4px); } 30% { -webkit-transform: translate(-3px,0px); transform: translate(-3px,0px); } 40% { -webkit-transform: translate(0px,-2px); transform: translate(0px,-2px); } 50% { -webkit-transform: translate(-4px,-4px); transform: translate(-4px,-4px); } 60% { -webkit-transform: translate(-1px,0px); transform: translate(-1px,0px); } 70% { -webkit-transform: translate(2px,2px); transform: translate(2px,2px); } 80% { -webkit-transform: translate(0px,-1px); transform: translate(0px,-1px); } 90% { -webkit-transform: translate(0px,-3px); transform: translate(0px,-3px); } 100% { -webkit-transform: translate(4px,-2px); transform: translate(4px,-2px); }  } @keyframes tdfwIntro { 0% { -webkit-transform: translate(-1px,-1px); transform: translate(-1px,-1px); } 10% { -webkit-transform: translate(-4px,1px); transform: translate(-4px,1px); } 20% { -webkit-transform: translate(0px,-4px); transform: translate(0px,-4px); } 30% { -webkit-transform: translate(-3px,0px); transform: translate(-3px,0px); } 40% { -webkit-transform: translate(0px,-2px); transform: translate(0px,-2px); } 50% { -webkit-transform: translate(-4px,-4px); transform: translate(-4px,-4px); } 60% { -webkit-transform: translate(-1px,0px); transform: translate(-1px,0px); } 70% { -webkit-transform: translate(2px,2px); transform: translate(2px,2px); } 80% { -webkit-transform: translate(0px,-1px); transform: translate(0px,-1px); } 90% { -webkit-transform: translate(0px,-3px); transform: translate(0px,-3px); } 100% { -webkit-transform: translate(4px,-2px); transform: translate(4px,-2px); }  }
   </style>
 
   <title>Turndownforwhat.JS</title>
@@ -98,7 +98,7 @@
         <div class="fb-share-button" data-layout="button_count" data-href="https://nthitz.github.io/turndownforwhatjs/"></div>
     </div>
   </div>
-  <p class='powered'> Made by 
+  <p class='powered'> Made by
     <a href="https://twitter.com/nthitz">nthitz</a>
   </p>
   <script>
@@ -108,31 +108,31 @@
         var vendors = ['ms', 'moz', 'webkit', 'o'];
         for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
             window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
                                        || window[vendors[x]+'CancelRequestAnimationFrame'];
         }
-     
+
         if (!window.requestAnimationFrame)
             window.requestAnimationFrame = function(callback, element) {
                 var currTime = new Date().getTime();
                 var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-                var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+                var id = window.setTimeout(function() { callback(currTime + timeToCall); },
                   timeToCall);
                 lastTime = currTime + timeToCall;
                 return id;
             };
-     
+
         if (!window.cancelAnimationFrame)
             window.cancelAnimationFrame = function(id) {
                 clearTimeout(id);
             };
     }());
-    var imgs = ['pLrq0jF','jw0Sx4c','VKE4oTV','rGfqb3Y','XDYlwRz'];
+    var imgs = ['pLrq0jF','jw0Sx4c','VKE4oTV'];
     var imgSrc = imgs[~~ (Math.random() * imgs.length)];
     imgSrc = 'http://i.imgur.com/' + imgSrc + '.png';
     var img = document.createElement('img');
     img.setAttribute('height', 400);
-    img.setAttribute('src', imgSrc); 
+    img.setAttribute('src', imgSrc);
     document.getElementById('img').appendChild(img);
 
 
