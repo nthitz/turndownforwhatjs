@@ -24,11 +24,17 @@
 }());
 (function() {
 	var player;
-	var turndownAt = 20
+	var firstTurnDown = 20
+	var firstPause = 59
+	var secondTurnDown = 78
+	var secondPause = 116
+	var lastTurnDown = 135
+	var endingPhase = 193
 	var numTurntAnimations = 10
 	var turntDown = false;
 	var maxNodes = 1000;
 	var animationCSS = {
+		'td_ending': 'tdEndingStyle 1s infinite ease-in-out',
 		'tdfw_intro': 'tdfwIntro 1s infinite ease-in-out',
 		'turntDown': function() {
 			var key = ~~ ( Math.random() * numTurntAnimations)
@@ -83,14 +89,24 @@
 	}
 
 	function checkTime() {
-		if(turntDown) {
+		requestAnimationFrame(checkTime);
+		if (player.getCurrentTime() > endingPhase){
+			if (turntDown === false){return;}
+			removeCurStyles();
+			addCurStyles();
+			turntDown = false;
 			return false;
 		}
-		requestAnimationFrame(checkTime);
-		if(player.getCurrentTime() > turndownAt) {
-			turntDown = true;
+		if((player.getCurrentTime() > firstTurnDown && player.getCurrentTime() < firstPause) || (player.getCurrentTime() > secondTurnDown && player.getCurrentTime() < secondPause) || (player.getCurrentTime() > lastTurnDown)) {
+			if (turntDown === true){return;}
 			removeCurStyles();
-			addCurStyles()
+			addCurStyles();
+			turntDown = true;
+		} else {
+			if (turntDown === false){return;}
+			removeCurStyles();
+			addCurStyles();
+			turntDown = false;
 		}
 
 	}
@@ -145,6 +161,10 @@
 
 
 		var allStyles = introKeyFrameDef
+
+		var endingStyle = '@keyframes tdEndingStyle {   0%, 100% {transform: translateY(0);} 50% {transform: translateY(-5px);} }';
+		endingStyle += '@-webkit-keyframes tdEndingStyle {   0%, 100% {transform: translateY(0);} 50% {transform: translateY(-5px);} }';
+		allStyles += endingStyle;
 
 		for(var i = 0; i < turntKeyFrames.length; i++) {
 			var kf = turntKeyFrames[i]
@@ -206,10 +226,13 @@
 		}
 	}
 	function allClasses() {
-		return ['tdfw_intro', 'turntDown']
+		return ['tdfw_intro', 'turntDown', 'td_ending']
 	}
 	function getCurClass() {
-		if(player.getCurrentTime() > turndownAt) {
+		if (player.getCurrentTime() > endingPhase){
+			return 'td_ending';
+		}
+		if((player.getCurrentTime() > firstTurnDown && player.getCurrentTime() < firstPause) || (player.getCurrentTime() > secondTurnDown && player.getCurrentTime() < secondPause) || (player.getCurrentTime() > lastTurnDown)) {
 			return 'turntDown'
 		} else {
 			return 'tdfw_intro'
